@@ -15,8 +15,10 @@ pipeline {
         stage('AI Code Review') {
             steps {
                 echo "Running AI Code Review..."
-                sh 'pip3 install requests --break-system-packages -q'
-                sh 'python3 ai_review.py app.py'
+                sh '''
+            sudo apt-get install -y python3-pip python3-requests 2>/dev/null || true
+            python3 ai_review.py app.py
+          '''
             }
         }
         stage('Build') {
