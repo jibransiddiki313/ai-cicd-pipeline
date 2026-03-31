@@ -32,7 +32,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Testing application"
-                sh 'docker run --rm ai-cicd-pipeline python -c "import flask; print(\"Flask OK\")"'
+                sh 'docker run --rm ai-cicd-pipeline python -c 'import flask; print(\"Flask OK\")'"
             }
         }
         stage('Deploy') {
