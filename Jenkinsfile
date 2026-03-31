@@ -15,7 +15,7 @@ pipeline {
         stage('AI Code Review') {
             steps {
                 echo "Running AI Code Review..."
-                sh 'pip install requests --break-system-packages -q'
+                sh 'pip3 install requests --break-system-packages -q'
                 sh 'python3 ai_review.py app.py'
             }
         }
