@@ -7,7 +7,7 @@ review code quality before every deployment. Built from scratch using Jenkins,
 Docker, and AWS EC2.
 
 ## Live App
-http://54.84.247.171:5000
+http://54.164.125.87:5000/
 
 ## How It Works
 Every time code is pushed to GitHub, the pipeline automatically:
